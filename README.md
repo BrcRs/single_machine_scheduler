@@ -4,9 +4,7 @@
 
 Single Machine Scheduler. Schedule tasks on a single machine.
 
-The application should optimize the order of execution of tasks on a single 
-machine to minimize weighted completion time. Tasks have a processing time and a weight.
-The weight reflects the priority of a task.
+The library should provide ways to optimize the order of execution of tasks on a single machine to minimize weighted completion time. Tasks have a processing time and a weight. The weight reflects the priority of a task.
 
 The algorithm used will be Weighted Shortest Processing Time.
 
@@ -20,12 +18,9 @@ The user will be provided means to:
 
 ## Design
 
-IFormatReader is an interface that will expose a function that reads an instance in some format 
-and translate it in a list of integer couples, representing each task. Another 
-function will do the opposite.
+IFormatReader is an interface that will expose a function that reads an instance in some format and translate it in a list of integer couples, representing each task. Another function will do the opposite.
 
-IAlgorithm is an interface for an algorithm which will feature a solve function,
-taking in input a list of integer couples (tasks), and returning a beginning date for each task.
+IAlgorithm is an interface for an algorithm which will feature a solve function, taking in input a list of integer couples (tasks), and returning a beginning date for each task.
 
 The WSP algorithm will implement the IAlgorithm interface.
 
